@@ -1,0 +1,1 @@
+<?php require 'config/database.php';require 'includes/auth.php';require_login();$role=$_SESSION['user']['role'];header('Location: '.($role==='admin'?'admin/dashboard.php':($role==='organizer'?'organizer/dashboard.php':'participant/dashboard.php')));exit;
